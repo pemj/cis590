@@ -1,0 +1,144 @@
+
+%
+%  $Description: Author guidelines and sample document in LaTeX 2.09$ 
+%
+%  $Author: lijun $
+%  $Date: 2005/09/19 16:32:45 $
+%  $Revision: 1.1 $
+%
+
+\documentclass[times, 10pt,twocolumn]{article} 
+\usepackage{latex8}
+\usepackage{times}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+
+
+%\documentstyle[times,art10,twocolumn,latex8]{article}
+
+%------------------------------------------------------------------------- 
+% take the % away on next line to produce the final camera-ready version 
+\pagestyle{empty}
+
+%------------------------------------------------------------------------- 
+\begin{document}
+
+\title{\LaTeX\ Author Guidelines 
+       for {\boldmath $8.5 \times 11$-Inch} Proceedings Manuscripts}
+
+\author{Paolo Ienne\\
+Swiss Federal Institute of Technology\\ Microcomputing Laboratory \\ IN-F 
+Ecublens, 1015 Lausanne, Switzerland\\ Paolo.Ienne@di.epfl.ch\\
+% For a paper whose authors are all at the same institution, 
+% omit the following lines up until the closing ``}''.
+% Additional authors and addresses can be added with ``\and'', 
+% just like the second author.
+\and
+Second Author\\
+Institution2\\
+First line of institution2 address\\ Second line of institution2 address\\ 
+SecondAuthor@institution2.com\\
+}
+
+\maketitle
+\thispagestyle{empty}
+
+\SubSection{Algorithm}
+
+ Let E be some experiment from a research paper with N participants . Then we have that
+$ E = \{ P_1, P_2, P_3, ...., P_N \}$ . Each participant in the experiment $P_i$  has a set of $l$ microbial samples taken from a particular body site, and  each sample m has a time when it was taken t. Then we have that $S^t(P_i) = \{ m_{S_1} , m_{S_2}, ...,  m_ {S_l} \}$  where each $S_j$ is a sample from participant $P_i$, and $ i > 0$, $j > 0$, and $ l > 0$ .  Then each microbial sample $m_{S_j}$ is a set of x operational taxonomic units or bugs such that we have $m_{S_j} = \{ b_1, b_2, ...., b_x\}$  where $x > 0$.  
+
+Assume an attacker has k samples taken from a single individual at a time t referred to as mr.duck smith where k greater than or equal to 1. 
+Then $A = \{ a_1, a_2, a_3, ...., a_k \}$  is the set of the samples from mr. duck smith that the attacker has collected. 
+
+Then let P be all the participants in experiment E, S be all the samples in experiment E, and O be all the possible operational taxonomic units (OTU) . Let N be the number of participants in experiment E, M be the number of samples in experiment E, and L be the number of OTUs in O. 
+
+Then the following procedures define an algorithm for determining if mr. duck smith is a participant in experiment E : 
+\errorcontextlines 10000
+
+
+
+
+\begin{algorithm}
+  \caption{Probability Based Microbial Signature Algorithm}
+  \label{algorithm}
+  \begin{algorithmic}[1]
+    \Procedure{MakeSignature}{$P_i$,$S$,$O$,$percent$}
+     \State $i \gets 0$
+     \State $j \gets 0$
+     \State $count \gets 0$
+      \State  $sig \gets []$ 
+      \For{$i=1 \to length(O)$}
+	\For{$j=1 \to length(S)$}
+	\State $sample \gets S[j] $
+	\If {$O[i] \in sample$}
+	\State $count \leftarrow count + 1 $
+	\EndIf
+	\State $totalPercent \gets count \setminus length(S)$
+	\If {$totalPercent \geq percent$}
+	\State  $ sig \gets sig.append(O[i],1) $
+	\Else
+	\State $ sig \gets sig.append(O[i],0) $
+	\EndIf
+
+	\State $count \gets 0$
+     \EndFor
+      \EndFor
+      \State return $sig
+    \EndProcedure
+     \Procedure{RemoveOTUS}{$P$, $Sigs$, $O$, $percent$}
+     \State $i \gets 0$
+     \State $j \gets 0$
+     \State $k \gets 0$
+     \State $count \gets 0$
+      \State $OTUs \gets []$
+      \For{$i=1 \to length(O)$}
+	\For{$j=1 \to length(P)$}
+	\If { $O[i] \in Sigs(P_j)$}
+		\State  $count \gets count + 1$
+	\EndIf
+	\State $totalPercent \gets count \setminus length(S)$
+	\If {$totalPercent \geq percent$}
+	\State $OTUs \gets OTUS.append(O[i])$
+	\EndIf
+	 \EndFor
+	 \State $count \gets 0$
+      \EndFor
+      \For { $k=1 \to length(Sigs)$ }
+	\State $Sigs[k] \gets Sigs[k].remove(OTUs)$
+      \EndFor
+    \EndProcedure
+     \Procedure{MatchSignature}{$s_1$,$s_2$}
+     \State $i \gets 0$
+     \State $count \gets 0$
+      \For{$i=1 \to length(S_1)$}
+	\If { $S_1[i] xor S_2[i]$}
+		\State  continue 
+	\Else
+		\State $count \gets count + 1$
+	\EndIf	
+      \EndFor
+      \State return count
+    \EndProcedure
+     \Procedure{MatchSignature}{$Sigs$,$aSig$}
+      \State $i \gets 0$
+     \State $samps \gets []$
+      \For{$i=1 \to length(Sigs)$}
+	\State $value \gets MatchSignature(Sigs[i], aSig])$
+	\State $samps \gets samps.append( (Sigs[i]), value)$
+      \EndFor
+      \State sort samps in ascending order
+      return samps
+    \EndProcedure
+
+ 
+  \end{algorithmic}
+\end{algorithm}
+
+%------------------------------------------------------------------------- 
+\nocite{ex1,ex2}
+\bibliographystyle{latex8}
+\bibliography{latex8}
+
+\end{document}
+
