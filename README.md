@@ -2,27 +2,37 @@
 proposal and paper for our group project
 
 ## Paper outline
-
-1. Is it ethical to automate labor if it means someone is out of a job?
-   1. History of industrial revolution
-      1. Short-term effects on workforce
-      2. Long-term effects on workforce
-      	 1. Increase in unskilled labor vs. increase in skilled labor
-      3. Early solutions (Luddite movement, Soviet Union, Great Leap Forward, labor unions)
-   2. The differences between the second machine age and industrial revolution
-   3. Comparison of effects of automation in countries of differing levels of economic development.
-   4. Effects of automation already occurring and interaction with other trends like 3d printing
-   5. Ethical analysis based on utilitarian ethics, kantian ethics, and social contract ethics
-   6. Proposed solutions 
-       1. Guaranteed income or citizen’s dividend 
-       2. Government as employer of last resort ( guaranteed job)
-       3. Worker ownership of automated machinery
-
-2. Who is responsible if an automated system harms someone?
-   1. What is responsibility?
-      1. deontological versus consequentialist interpretation
-   2. Why do we use the phrase responsibility?
-      1. Free will and determinism
-   3. Can systems of sufficient complexity take on moral agency?
-   4. Does the culpability (or lack thereof) of someone who made/steered/operated/purchased the system vary depending on the complexity of the system?
-   5. Does the utility of responsibility break down if it is shared among a sufficiently large group?
+1. [ ] Introduction : @NisansaDS 
+2. [ ] Background : @pemj
+   1. [ ] History of Industrial Revolution : @pemj 
+3. [ ] Present Scenario: @gsondur
+4. Other Solutions
+   1. [ ] Singularitarianism : @efuller1
+   2. [ ] Jason Lanier : @efuller1
+   3. [ ] Bill Joy : @efuller1
+   4. [ ] Amish : @efuller1
+   2. [ ] DGR : @pemj
+5. [ ] Our Solution (Framework)
+    - [ ] Identifying Stakeholders : @gsondur
+        - [ ] Basis for Identification:
+            - [ ] Cultural Bias
+            - [ ] Value Systems
+            - [ ] Economic Status
+    - [ ] General Stakeholders : @gsondur
+        - [ ] Public, Government, Corporate and their Different Interplays
+    - [ ] Value System: All
+        - [ ] Weighing of the Values:
+            - [ ] Depending on culture and bias with it
+        - [ ] Main Idea: A negative utilitarian framework focused on 
+	preventing harm, where we define harm in terms of violation
+	of a number of values that we consider to be important.  We
+	apply this framework with the caveat that its usefulness may
+	break down at certain moral extrema, which result in a
+	reluctance to make trade-offs between particular harms in
+	particular situations.
+            - [ ] Autonomy of Self
+            - [ ] Welfare/Well Being
+            - [ ] Economic Consequences @pemj
+    - [ ] Conclusion(Balancing the values and stakeholders)
+6. [ ] Application: Self Driving Car: @quacksax
+7. [ ] Conclusion: @NisansaDS
